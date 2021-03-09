@@ -1,0 +1,81 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "tsconfigRootDir": "."
+  },
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking"
+  ],
+  "rules": {
+    /**
+     * @description rules of eslint-plugin-prettier
+     */
+    "indent": "off",
+    "@typescript-eslint/indent": [
+      "error", 
+      2
+    ],
+    "quotes": "off",
+    "@typescript-eslint/quotes": [
+      "error", 
+      "single"
+    ],
+    "semi": "off",
+    "@typescript-eslint/semi": [
+      "error", 
+      "never"
+    ],
+    "@typescript-eslint/space-before-function-paren": ["error"],
+    "@typescript-eslint/no-var-requires": "warn",
+    "no-empty-function": "off",
+    "@typescript-eslint/no-empty-function": "off",
+    "@typescript-eslint/no-unsafe-member-access": "warn",
+    "@typescript-eslint/no-unsafe-assignment": "warn",
+    "@typescript-eslint/no-unsafe-return": "warn",
+    "@typescript-eslint/restrict-plus-operands": "off",
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        "selector": "default",
+        "format": ["camelCase", "PascalCase", "UPPER_CASE"]
+      },
+      {
+        "selector": "class",
+        "format": ["PascalCase"]
+      },
+      {
+        "selector": "interface",
+        "format": ["PascalCase"]
+      },
+      {
+        "selector": "typeAlias",
+        "format": ["PascalCase"]
+      },
+      {
+        "selector": "property",
+        "format": null
+      },
+      {
+        "selector": "variable",
+        "format": ["camelCase"],
+        "leadingUnderscore": "allow",
+        "trailingUnderscore": "allow"
+      },
+      {
+        "selector": "parameter",
+        "format": ["camelCase"],
+        "leadingUnderscore": "allow"
+      }
+    ]
+  },
+  "env": {
+    "jest": true
+  }
+}
